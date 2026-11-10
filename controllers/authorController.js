@@ -13,8 +13,12 @@ exports.createAuthor = async (req, res) => {
 
 // GET /authors
 exports.getAuthors = async (req, res) => {
-  const authors = await Author.find();
-  res.json(authors);
+  try {
+    const authors = await Author.find();
+    res.json(authors);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
 };
 
 // GET /authors/:id
