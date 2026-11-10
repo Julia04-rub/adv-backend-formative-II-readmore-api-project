@@ -18,7 +18,9 @@ app.use('/books', bookRoutes);
 const PORT = process.env.PORT || 3000;
 
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect(process.env.MONGO_URI, {
+    dbName: 'readmore', // <-- Add this
+  })
   .then(() => {
     console.log('MongoDB connected');
     app.listen(PORT, () => console.log(`Server on port ${PORT}`));
