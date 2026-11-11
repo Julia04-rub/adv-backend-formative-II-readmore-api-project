@@ -39,4 +39,4 @@ A RESTful API built with Express.js, MongoDB, and Mongoose. This API manages Aut
 - **Author Stats:** Calculates `bookCount`, `averagePrice`, `cheapestBook`, and `mostExpensiveBook`, handling the case where an author has no books.
 
 ## Video Walkthrough
-
+: https://youtu.be/f3ELxt-v2BU
